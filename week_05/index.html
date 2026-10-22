@@ -4,93 +4,175 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+<style>
+
+body {
+    zoom: 80%;
+}
+
+
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+ul {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 10px;
+}
+
+.top_copy {
+    font-size: 74.52px;
+    margin-bottom: 0px;
+    margin-left: 150px;
+}
+
+.top_sub_copy{
+    font-size: 39.45px;
+    margin-top: 0px;
+    margin-left: 150px;
+}
+
+.car_h2 {
+    font-size: 30px;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+
+.car_h3 {
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.car_container {    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 25px;
+    gap: 120px;
+    left: 70px;
+    position: relative;
+    width: calc(100% - 130px);
+}
+
+.image_cars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    min-width: 0;
+    position: relative;
+    top: 175px;
     
-<header>
-    <div>
-        <p>FORD LOGO</p>
-        <nav> 
-            <ul>
-                <li><a href="https://www.ford.ca/f-series/?gnav=header-brand-f150">VEHICLES</a></li>
-                <li><a href="https://shop.ford.ca/showroom/?gnav=header-shop-bp&linktype=build#/">SHOP</a></li>
-                <li><a href="https://www.ford.ca/support/?gnav=header-support">SUPPORT & SERVICE</a></li>
-                <li><a href="https://www.ford.ca/help/contact/?gnav=header-support">FORD PRO SOLUTIONS</a></li>
-            </ul>
-        </nav>
-    </div>
+}
 
-    <div>
-        <nav>
-            <ul>
-               <li><form action="/searchpage" method="GET" role="search">
-                     <label for="site-search" class="visually-hidden"></label>
-                     <input type="search" name="q" id="site-search" placeholder="Search...">
-                     <button>Go</button>
-                    </form></li>
-                <li><a href="https://www.ford.ca/dealerships/?gnav=header-fd">LOCATE DEALER</a></li>
-                <li><a href="https://www.ford.ca">SIGN IN</a></li>
-            </ul>
-        </nav>
-    </div>
+.image_back {
+    display: flex;
+    position: absolute;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
 
-    <div>
-        <img src="" alt="image of 2026 Ford Escape">
-    </div>
+.car_copy_container {
+    display: flex;
+    justify-content: end;
+    position: relative;
+    left: 100px;
+    width: calc(100% - 130px);
+    margin-top: 200px;
+    gap: 120px;
+    right: 150px;
+}
 
-    <div>
-        <h2>2026</h2>
-        <h1>ESCAPE</h1>
-        <h2>STARTING AT $30,350</h2>
-        <p>DETAILS</p>
-    </div>
+.car_copy {
+    flex: 1;
+    width: 322px;
+    height: 372px;
+    box-sizing: border-box;
+    background-color: rgb(224, 224, 224);
+}
 
-    <div>
-        <ul>
-            <li><a href="">SEARCH INVENTORY</a></li>
-            <li><a href="">2025 ESCAPE</a></li>
-        </ul>
-    </div>
+.build_price_button {
+    flex: 1;
+    width: 161px;
+    height: 35px;
+    box-sizing: border-box;
+    background-color: rgb(26, 89, 152);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    height: 50px;
+    color: aliceblue;
+    font-size: 22px;
+    position: relative;
+    top: 30px;
+    left: 20px;
+}
 
-</header>
+</style>
+
+
+
+</head>
+
+<body class="bebas-neue-regular">
 
 <main>
     
 <section>
-    <div>
-       <h1>FIND THE RIGHT RIDE FOR YOUR ROAD</h1>
 
-            <h2>4 OPTIONS TO MAKE YOUR MOVE</h2>
-            
+    <div>
+       <h1 class="top_copy">FIND THE RIGHT RIDE FOR YOUR ROAD</h1>
+
+            <h2 class="top_sub_copy">4 OPTIONS TO MAKE YOUR MOVE</h2>       
     </div>
 
-        <div>
-          <img src="" alt="image of city skyline">
-        </div>
+    <div class="image_back">
+        <img src="car_images/find-the-right-ride_bg.png" alt="image of city skyline">
+    </div>
 
-        <div>
-            <img src="" alt="image of blue Ford Escape Plug-in Hybrid">
-        </div>
+<div class="car_container">
+    
+    <div class="image_cars">
+        <img src="car_images/Escape_Plug-in_Hybrid.png" alt="image of blue Ford Escape Plug-in Hybrid">
+    </div>
 
-        <div>
-            <img src="" alt="image of white Ford Escape Active">
-        </div>
+    <div class="image_cars">
+        <img src="car_images/Escape_Active.png" alt="image of white Ford Escape Active">
+    </div>
+        
+    <div class="image_cars">
+        <img src="car_images/Escape_ST-Line.png" alt="image of grey Ford Escape St-line">
+    </div>
 
-        <div>
-            <img src="" alt="image of grey Ford Escape St-line">
-        </div>
+    <div class="image_cars">
+        <img src="car_images/Escape_Platinum.png" alt="image of red Ford Escape Platinum">
+    </div>
 
-        <div>
-            <img src="" alt="image of red Ford Escape Platinum">
-        </div>
+</div>
 
  </section>
         
  <section>
-    <div>
-        <h2>Escape Plug-in hybrid</h2>
+    
+
+<div class="car_copy_container">
+
+    <div class="car_copy">
+        <h2 class="car_h2">Escape® Plug-in Hybrid</h2>
         
-            <h3>Starting at $35,400</h3>
+            <h3 class="car_h3">Starting at $35,400</h3>
             
             <ul>
                 <li>2.5L IVCT atkinson cycle I-4 hybrid engine</li>
@@ -99,30 +181,18 @@
                 <li>101 EPA-EST. MPGE [combined]</li>
             </ul>
 
-        <a href=""> BUILD & PRICE</a>
-
-    </div>
-
-    <div>
-        <h2>Escape Active</h2>
-
-            <h3>Starting at $30,350</h3>
-            
-            <ul>
-                <li>2.5L IVCT atkinson cycle I-4 hybrid engine</li>
-                <li>Standard front-wheel drive</li>
-                <li>13.2" Center Display</li>
-                <li>101 EPA-EST. MPGE [combined]</li>
-            </ul>
-
-        <a href=""> BUILD & PRICE</a>
-
-    </div>
-
-    <div>
-        <h2>Escape ST-Line</h2>
         
-            <h3>Starting at $31,195</h3>
+         <div class="build_price_button">
+             <p> Build & Price</p>
+         </div>
+
+    </div>
+
+
+    <div class="car_copy">
+        <h2 class="car_h2">Escape Active®</h2>
+
+            <h3 class="car_h3">Starting at $30,350</h3>
             
             <ul>
                 <li>2.5L IVCT atkinson cycle I-4 hybrid engine</li>
@@ -131,14 +201,16 @@
                 <li>101 EPA-EST. MPGE [combined]</li>
             </ul>
 
-        <a href=""> BUILD & PRICE</a>
+         <div class="build_price_button">
+             <p>Build & Price</p>
+         </div>
 
     </div>
 
-    <div>
-        <h2>Escape Platinum</h2>
+    <div class="car_copy">
+        <h2 class="car_h2">Escape® ST-Line</h2>
         
-            <h3>Starting at $37,940</h3>
+            <h3 class="car_h3">Starting at $31,195</h3>
             
             <ul>
                 <li>2.5L IVCT atkinson cycle I-4 hybrid engine</li>
@@ -147,9 +219,31 @@
                 <li>101 EPA-EST. MPGE [combined]</li>
             </ul>
 
-        <a href=""> BUILD & PRICE</a>
+            <div class="build_price_button">
+             <p>Build & Price</p>
+         </div>
 
     </div>
+
+    <div class="car_copy">
+        <h2 class="car_h2">Escape® Platinum™</h2>
+        
+            <h3 class="car_h3">Starting at $37,940</h3>
+            
+            <ul>
+                <li>2.5L IVCT atkinson cycle I-4 hybrid engine</li>
+                <li>Standard front-wheel drive</li>
+                <li>13.2" Center Display</li>
+                <li>101 EPA-EST. MPGE [combined]</li>
+            </ul>
+
+        <div class="build_price_button">
+             <p>Build & Price</p>
+         </div>
+
+    </div>
+
+</div>
 
 </section>
 
