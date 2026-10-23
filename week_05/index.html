@@ -10,8 +10,15 @@
 
 <style>
 
+html {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     zoom: 80%;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -27,15 +34,111 @@ ul {
     flex-direction: column;
     position: relative;
     gap: 10px;
+    margin: 0;
 }
 
-.top_copy {
+nav {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    box-sizing: border-box;
+}
+
+.nav_links {
+    display: flex;
+    justify-content: start;
+    align-content: center;
+    flex-direction: row;
+    position: relative;
+    list-style: none;
+    color: white;
+    top: 70px;
+    left: 30px;
+    gap: 50px;
+}
+
+.nav_icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+    list-style: none;
+    color: white;
+    gap: 25px;
+    top: 30px;
+    left: 1180px;
+}
+
+.hero {
+    display: flex;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+
+.hero_copy {
+    position: absolute;
+    top: 750px;
+    left: 100px;
+    z-index: 5;
+    color: white;
+    line-height: 22px;
+}
+
+.escape_hero {
+    font-size: 50px;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.hero_buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    font-size: 18px;
+}
+
+.search_inventory_button{
+    display: flex;
+    background-color: white;
+    border-radius: 50px;
+    width: 140px;
+    height: 40px;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.escape_button{
+    display: flex;
+    justify-content: start;
+    border: 2px solid white;
+    border-radius: 50px;
+    width: 140px;
+    height: 40px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.right_ride {
     font-size: 74.52px;
     margin-bottom: 0px;
     margin-left: 150px;
 }
 
-.top_sub_copy{
+.right_ride_sub{
     font-size: 39.45px;
     margin-top: 0px;
     margin-left: 150px;
@@ -103,14 +206,12 @@ ul {
 }
 
 .build_price_button {
-    flex: 1;
+    display: flex;
+    justify-content: center;
     width: 161px;
     height: 35px;
     box-sizing: border-box;
     background-color: rgb(26, 89, 152);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border-radius: 50px;
     height: 50px;
     color: aliceblue;
@@ -118,6 +219,8 @@ ul {
     position: relative;
     top: 30px;
     left: 20px;
+    align-items: center;
+    text-align: center;
 }
 
 </style>
@@ -129,13 +232,73 @@ ul {
 <body class="bebas-neue-regular">
 
 <main>
+
+<nav>
+    <div">
+         <ul class="nav_links">
+            <li> <img src="car_images/FordOval.png" alt="image of ford logo"></li>
+            <li>Vehicles</li>
+            <li>Shop</li>
+            <li>Support & Service</li>
+            <li>Ford Pro Solutions</li>
+         </ul>
+    </div>
+
+    <div>
+        <ul class="nav_icons">
+            <li> <img src="car_images/search-v2-white.png" alt="search icon"></li>
+            <li> <img src="car_images/location-outline-v2-white.png" alt="location marker icon"> Locate Dealer</li>
+            <li> <img src="car_images/account-outline-v2-white.png" alt="profile icon"></li>
+            <li> <img src="car_images/globe-v2-white.png" alt="web icon"></li>
+        </ul>
+    </div>
+
+</nav>
+
+<div class="hero">
+    <img src="car_images/hero_background.png" alt="hero image of Ford Escape">
+</div>
+
+<div class="hero_copy">
+
+    <h2>
+        2026
+    </h2>
+
+    <h1 class="escape_hero">
+        Escape®
+    </h1>
+
+    <h2>
+        Starting at $30,350
+    </h2>
+
+    <h6 class="underline">
+        Details
+    </h6>
+
+    <div class="hero_buttons">
+
+        <div class="search_inventory_button">
+            Search Inventory
+        </div>
+
+        <div class="escape_button">
+            2025 Escape
+        </div>
+
+    </div>
+
+</div>
+
+
     
 <section>
 
     <div>
-       <h1 class="top_copy">FIND THE RIGHT RIDE FOR YOUR ROAD</h1>
+       <h1 class="right_ride">FIND THE RIGHT RIDE FOR YOUR ROAD</h1>
 
-            <h2 class="top_sub_copy">4 OPTIONS TO MAKE YOUR MOVE</h2>       
+            <h2 class="right_ride_sub">4 OPTIONS TO MAKE YOUR MOVE</h2>       
     </div>
 
     <div class="image_back">
