@@ -3,21 +3,419 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> GRD 311 - Web & Multimedia 1 </title>
-</head>
-<body>
-    <h1>GRD 311 | Design for Multimedia 1</h1>
-    
-    <h2>List of Assignments</h2>
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
-<ul>
-    <li>
-      <a href="week_01/index.html">Week 1</a>
-    </li>
-      <li>
-        <a href="week_02/index.html">Week 2</a>
-    </li>
-</ul>
+<style>
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    zoom: 80%;
+    margin: 0;
+    padding: 0;
+}
+
+
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+ul {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 10px;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    box-sizing: border-box;
+}
+
+.nav_links {
+    display: flex;
+    justify-content: start;
+    align-content: center;
+    flex-direction: row;
+    position: relative;
+    list-style: none;
+    color: white;
+    top: 70px;
+    left: 30px;
+    gap: 50px;
+}
+
+.nav_icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+    list-style: none;
+    color: white;
+    gap: 25px;
+    top: 70px;
+    left: 900px;
+}
+
+.hero {
+    display: flex;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+
+.hero_copy {
+    position: absolute;
+    top: 750px;
+    left: 100px;
+    z-index: 5;
+    color: white;
+    line-height: 22px;
+}
+
+.escape_hero {
+    font-size: 50px;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.hero_buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    font-size: 18px;
+}
+
+.search_inventory_button{
+    display: flex;
+    background-color: white;
+    border-radius: 50px;
+    width: 140px;
+    height: 40px;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.escape_button{
+    display: flex;
+    justify-content: start;
+    border: 2px solid white;
+    border-radius: 50px;
+    width: 140px;
+    height: 40px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.right_ride {
+    font-size: 74.52px;
+    margin-bottom: 0px;
+    margin-left: 150px;
+}
+
+.right_ride_sub{
+    font-size: 39.45px;
+    margin-top: 0px;
+    margin-left: 150px;
+}
+
+.car_h2 {
+    font-size: 30px;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+
+.car_h3 {
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.car_container {    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 25px;
+    gap: 120px;
+    left: 70px;
+    position: relative;
+    width: calc(100% - 130px);
+}
+
+.image_cars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    min-width: 0;
+    position: relative;
+    top: 175px;
+    
+}
+
+.image_back {
+    display: flex;
+    position: absolute;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.car_copy_container {
+    display: flex;
+    justify-content: end;
+    position: relative;
+    left: 100px;
+    width: calc(100% - 130px);
+    margin-top: 200px;
+    gap: 120px;
+    right: 150px;
+}
+
+.car_copy {
+    width: 386px;
+    height: 400px;
+    background-size: contain;
+    box-sizing: border-box;
+    padding-top: 25px;
+    background-color: rgb(224, 224, 224);
+}
+
+.build_price_button {
+    display: flex;
+    justify-content: center;
+    width: 160px;
+    height: 35px;
+    box-sizing: border-box;
+    background-color: rgb(26, 89, 152);
+    border-radius: 50px;
+    height: 40px;
+    color: aliceblue;
+    font-size: 22px;
+    position: relative;
+    top: 30px;
+    left: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+</style>
+
+
+
+</head>
+
+<body class="bebas-neue-regular">
+
+<main>
+
+<nav>
+    <div>
+         <ul class="nav_links">
+            <li> <img src="car_images/FordOval.png" alt="image of ford logo"></li>
+            <li>Vehicles</li>
+            <li>Shop</li>
+            <li>Support & Service</li>
+            <li>Ford Pro Solutions</li>
+         </ul>
+    </div>
+
+    <div>
+        <ul class="nav_icons">
+            <li> <img src="car_images/search-v2-white.png" alt="search icon"></li>
+            <li> <img src="car_images/location-outline-v2-white.png" alt="location marker icon"> Locate Dealer</li>
+            <li> <img src="car_images/account-outline-v2-white.png" alt="profile icon"></li>
+            <li> <img src="car_images/globe-v2-white.png" alt="web icon"></li>
+        </ul>
+    </div>
+
+</nav>
+
+<div class="hero">
+    <img src="car_images/hero_background.png" alt="hero image of Ford Escape">
+</div>
+
+<div class="hero_copy">
+
+    <h2>
+        2026
+    </h2>
+
+    <h1 class="escape_hero">
+        Escape®
+    </h1>
+
+    <h2>
+        Starting at $30,350
+    </h2>
+
+    <h3 class="underline">
+        Details
+    </h3>
+
+    <div class="hero_buttons">
+
+        <div class="search_inventory_button">
+            Search Inventory
+        </div>
+
+        <div class="escape_button">
+            2025 Escape
+        </div>
+
+    </div>
+
+</div>
+
+
+    
+<section>
+
+    <div>
+       <h1 class="right_ride">FIND THE RIGHT RIDE FOR YOUR ROAD</h1>
+
+            <h2 class="right_ride_sub">4 OPTIONS TO MAKE YOUR MOVE</h2>       
+    </div>
+
+    <div class="image_back">
+        <img src="car_images/find-the-right-ride_bg.png" alt="image of city skyline">
+    </div>
+
+<div class="car_container">
+    
+    <div class="image_cars">
+        <img src="car_images/Escape_Plug-in_Hybrid.png" alt="image of blue Ford Escape Plug-in Hybrid">
+    </div>
+
+    <div class="image_cars">
+        <img src="car_images/Escape_Active.png" alt="image of white Ford Escape Active">
+    </div>
+        
+    <div class="image_cars">
+        <img src="car_images/Escape_ST-Line.png" alt="image of grey Ford Escape St-line">
+    </div>
+
+    <div class="image_cars">
+        <img src="car_images/Escape_Platinum.png" alt="image of red Ford Escape Platinum">
+    </div>
+
+</div>
+
+ </section>
+        
+ <section>
+    
+
+<div class="car_copy_container">
+
+    <div class="car_copy">
+        <h2 class="car_h2">Escape® Plug-in Hybrid</h2>
+        
+            <h3 class="car_h3">Starting at $35,400</h3>
+            
+            <ul>
+                <li>2.5L IVCT atkinson cycle I-4 hybrid engine</li>
+                <li>Standard front-wheel drive</li>
+                <li>13.2" Center Display</li>
+                <li>101 EPA-EST. MPGE [combined]</li>
+            </ul>
+
+        
+         <div class="build_price_button">
+             <p> Build & Price</p>
+         </div>
+
+    </div>
+
+
+    <div class="car_copy">
+        <h2 class="car_h2">Escape Active®</h2>
+
+            <h3 class="car_h3">Starting at $30,350</h3>
+            
+            <ul>
+                <li>2.5L IVCT atkinson cycle I-4 hybrid engine</li>
+                <li>Standard front-wheel drive</li>
+                <li>13.2" Center Display</li>
+                <li>101 EPA-EST. MPGE [combined]</li>
+            </ul>
+
+         <div class="build_price_button">
+             <p>Build & Price</p>
+         </div>
+
+    </div>
+
+    <div class="car_copy">
+        <h2 class="car_h2">Escape® ST-Line</h2>
+        
+            <h3 class="car_h3">Starting at $31,195</h3>
+            
+            <ul>
+                <li>2.5L IVCT atkinson cycle I-4 hybrid engine</li>
+                <li>Standard front-wheel drive</li>
+                <li>13.2" Center Display</li>
+                <li>101 EPA-EST. MPGE [combined]</li>
+            </ul>
+
+            <div class="build_price_button">
+             <p>Build & Price</p>
+         </div>
+
+    </div>
+
+    <div class="car_copy">
+        <h2 class="car_h2">Escape® Platinum™</h2>
+        
+            <h3 class="car_h3">Starting at $37,940</h3>
+            
+            <ul>
+                <li>2.5L IVCT atkinson cycle I-4 hybrid engine</li>
+                <li>Standard front-wheel drive</li>
+                <li>13.2" Center Display</li>
+                <li>101 EPA-EST. MPGE [combined]</li>
+            </ul>
+
+        <div class="build_price_button">
+             <p>Build & Price</p>
+         </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+
+</main>
+
 
 </body>
 </html>

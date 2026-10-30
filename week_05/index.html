@@ -13,12 +13,14 @@
 html {
     margin: 0;
     padding: 0;
+    min-width: auto;
+    overflow-x: hidden;
 }
 
 body {
-    zoom: 80%;
     margin: 0;
-    padding: 0;
+    min-width: auto;
+    overflow-x: hidden;
 }
 
 
@@ -33,19 +35,15 @@ ul {
     display: flex;
     flex-direction: column;
     position: relative;
+    top: 20px;
     gap: 10px;
     margin: 0;
 }
 
-nav {
+
+.nav {
     display: flex;
-    flex-direction: row;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10;
-    box-sizing: border-box;
+    justify-content: space-between;
 }
 
 .nav_links {
@@ -55,7 +53,6 @@ nav {
     flex-direction: row;
     position: relative;
     list-style: none;
-    color: white;
     top: 70px;
     left: 30px;
     gap: 50px;
@@ -68,31 +65,34 @@ nav {
     flex-direction: row;
     position: relative;
     list-style: none;
-    color: white;
     gap: 25px;
-    top: 30px;
-    left: 1180px;
+    top: 65px;
+    right: 30px;
 }
 
 .hero {
-    display: flex;
-    max-width: 100%;
-    box-sizing: border-box;
-    overflow-x: hidden;
+    background-image: url("car_images/hero_background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+    color:  white;
 }
 
 
 .hero_copy {
-    position: absolute;
-    top: 750px;
+    position: relative;
+    top: 450px;
     left: 100px;
-    z-index: 5;
-    color: white;
     line-height: 22px;
 }
 
 .escape_hero {
     font-size: 50px;
+}
+
+h3 {
+   font-size: 15px;
 }
 
 .underline {
@@ -111,7 +111,7 @@ nav {
     display: flex;
     background-color: white;
     border-radius: 50px;
-    width: 140px;
+    width: 160px;
     height: 40px;
     color: black;
     justify-content: center;
@@ -123,9 +123,8 @@ nav {
     justify-content: start;
     border: 2px solid white;
     border-radius: 50px;
-    width: 140px;
+    width: 160px;
     height: 40px;
-    color: white;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -135,17 +134,17 @@ nav {
 .right_ride {
     font-size: 74.52px;
     margin-bottom: 0px;
-    margin-left: 150px;
+    margin-left: 100px;
 }
 
 .right_ride_sub{
     font-size: 39.45px;
     margin-top: 0px;
-    margin-left: 150px;
+    margin-left: 100px;
 }
 
 .car_h2 {
-    font-size: 30px;
+    font-size: 28px;
     padding-top: 10px;
     padding-left: 20px;
 }
@@ -161,44 +160,46 @@ nav {
     justify-content: space-between;
     align-items: center;
     margin: 0 25px;
-    gap: 120px;
-    left: 70px;
     position: relative;
-    width: calc(100% - 130px);
+    width: calc(100% - 100px);
+    bottom: 100px;
+    gap: 40px;
 }
 
 .image_cars {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    flex: 1;
     min-width: 0;
+    flex: 1;
     position: relative;
-    top: 175px;
-    
+    top: 275px;
 }
 
-.image_back {
-    display: flex;
-    position: absolute;
-    max-width: 100%;
-    box-sizing: border-box;
-    overflow-x: hidden;
+.image_cars img {
+    transform: scale(0.85);
+}
+
+.skyline_background {
+    background-image: url("car_images/find-the-right-ride_bg.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    max-height: 300px;
+    margin-top: 50px;
 }
 
 .car_copy_container {
     display: flex;
-    justify-content: end;
+    justify-content: start;
     position: relative;
-    left: 100px;
     width: calc(100% - 130px);
-    margin-top: 200px;
-    gap: 120px;
-    right: 150px;
+    margin-top: 175px;
+    gap: 60px;
+    left: 75px;
 }
 
 .car_copy {
-    flex: 1;
     width: 322px;
     height: 372px;
     box-sizing: border-box;
@@ -208,20 +209,28 @@ nav {
 .build_price_button {
     display: flex;
     justify-content: center;
-    width: 161px;
-    height: 35px;
+    width: 160px;
+    height: 40px;
     box-sizing: border-box;
     background-color: rgb(26, 89, 152);
     border-radius: 50px;
     height: 50px;
-    color: aliceblue;
+    color: white;
     font-size: 22px;
     position: relative;
-    top: 30px;
+    top: 55px;
     left: 20px;
     align-items: center;
     text-align: center;
 }
+
+.white_space {
+    height: 100px;
+    width: 100%;
+    background-color: white;
+}
+
+
 
 </style>
 
@@ -233,8 +242,9 @@ nav {
 
 <main>
 
-<nav>
-    <div">
+<div class="hero">
+
+<nav class="nav">
          <ul class="nav_links">
             <li> <img src="car_images/FordOval.png" alt="image of ford logo"></li>
             <li>Vehicles</li>
@@ -242,22 +252,16 @@ nav {
             <li>Support & Service</li>
             <li>Ford Pro Solutions</li>
          </ul>
-    </div>
 
-    <div>
         <ul class="nav_icons">
             <li> <img src="car_images/search-v2-white.png" alt="search icon"></li>
             <li> <img src="car_images/location-outline-v2-white.png" alt="location marker icon"> Locate Dealer</li>
             <li> <img src="car_images/account-outline-v2-white.png" alt="profile icon"></li>
             <li> <img src="car_images/globe-v2-white.png" alt="web icon"></li>
         </ul>
-    </div>
 
 </nav>
 
-<div class="hero">
-    <img src="car_images/hero_background.png" alt="hero image of Ford Escape">
-</div>
 
 <div class="hero_copy">
 
@@ -265,17 +269,11 @@ nav {
         2026
     </h2>
 
-    <h1 class="escape_hero">
-        Escape®
-    </h1>
+    <h1 class="escape_hero">Escape <sup>®</sup></h1>
 
-    <h2>
-        Starting at $30,350
-    </h2>
+    <h2>Starting at $30,350 <sup>1</sup></h2>
 
-    <h6 class="underline">
-        Details
-    </h6>
+    <h3 class="underline">Details</h3>
 
     <div class="hero_buttons">
 
@@ -291,19 +289,20 @@ nav {
 
 </div>
 
+</div>
+
 
     
 <section>
 
-    <div>
+       <div>
        <h1 class="right_ride">FIND THE RIGHT RIDE FOR YOUR ROAD</h1>
 
-            <h2 class="right_ride_sub">4 OPTIONS TO MAKE YOUR MOVE</h2>       
+            <h2 class="right_ride_sub">4 OPTIONS TO MAKE YOUR MOVE.</h2>       
     </div>
 
-    <div class="image_back">
-        <img src="car_images/find-the-right-ride_bg.png" alt="image of city skyline">
-    </div>
+<div class="skyline_background">
+
 
 <div class="car_container">
     
@@ -325,11 +324,7 @@ nav {
 
 </div>
 
- </section>
-        
- <section>
-    
-
+   
 <div class="car_copy_container">
 
     <div class="car_copy">
@@ -407,6 +402,10 @@ nav {
     </div>
 
 </div>
+
+</div>
+
+
 
 </section>
 
